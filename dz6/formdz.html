@@ -63,7 +63,7 @@
                     border-radius: 10px;
              border: 1px solid red;
               margin:5px 15px;
-                padding:0px 10px;}
+                padding:0px 10px; display: none;}
         
         input#no {margin-right: 70px; }
         input#lil {margin-right: 70px;}
@@ -84,6 +84,19 @@
         select:valid {border: 2px solid rgb(47, 255, 57)}
         form input#date:valid {border: 2px solid rgb(47, 255, 57)}
         form input#time:valid {border: 2px solid rgb(47, 255, 57)}
+
+
+        form input#name:invalid {border: 2px solid red;}
+        form input#mail:invalid {border: 2px solid red;}
+        form input#pass:invalid {border: 2px solid red;}
+        select:invalid {border: 2px solid red;}
+        form input#date:invalid {border: 2px solid red;}
+        form input#time:invalid {border: 2px solid red;}
+
+        input#date:valid ~ input#time {display: block;}
+
+        
+       
 
 
         
@@ -109,8 +122,8 @@
     <fieldset >
         <legend> Выбор курса</legend>
          Выберите курс <br>
-        <select id="study" name="study" required>
-        <option value="base" selected hidden disabled>Выберите курс</option>
+        <select id="study" name="study" required >
+        <option value=""  hidden >Выберите курс</option>
         <option value="it" >Веб-разработка</option>
         <option value="data">Data Scienceе</option>
         <option value="design">Графический дизайн</option><br>
@@ -119,8 +132,8 @@
         Дата начала<br>
         <input type="date" id="date" name="date"  min="2026-01-20" max="2026-05-01" required>
 
-        <legend hidden >Предпочитаемое время занятий</legend> <br>
-        <input type="time" id="time" name="time" required hidden >
+        <legend  >Предпочитаемое время занятий (с 13:00 до 20:00)</legend> <br>
+        <input type="time" id="time" name="time" required  >
     </fieldset>
     <fieldset>
         <legend>Дополнительно</legend>
