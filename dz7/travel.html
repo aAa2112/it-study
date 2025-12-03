@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;
+        padding:0;
+        border: 0;
+        font-size:100%;
+        font: inherit;
+        font-family: 'Lato', sans-serif;}
+        #travel {
+      display: grid;
+      max-width: 1600px;
+      height: 900px;
+      grid-template-columns: repeat(3, minmax(300px, 1fr)) ;
+      grid-template-rows: repeat(3, minmax(300px, 1fr)) ;
+      gap: 15px;
+      margin:20px auto;
+      }
+   
+    div > p {font-size: 25px; 
+        font-family:Verdana,  Tahoma, sans-serif;
+        color:rgb(12, 10, 72);
+            font-weight: bold;
+        padding: 20px; text-align: center;
+        }
+
+        p:hover {display: none;}
+
+    .spain {grid-row: 1/ span 3;
+        position: relative;
+        overflow: hidden;
+            background: url("Spain.jpg") ;
+        background-size: cover;
+        }
+        
+        .spain:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;
+        }
+        .spain:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .spain:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+        .spain:hover > p {display:none;}
+
+
+    
+
+    .bali {grid-column: 2/ span 2;
+    position: relative;
+        overflow: hidden;
+            background: url("Bali.jpg") ;
+        background-size: cover;}
+    .bali:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;
+        }
+        .bali:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .bali:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+    .bali:hover > p {display:none;}
+
+
+    .egypt {grid-row: 2;
+                grid-column: 2;
+            position: relative;
+        overflow: hidden;
+            background: url("Egypt.jpg") ;
+        background-size: cover;}
+        .egypt:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;}
+    .egypt:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .egypt:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+    .egypt:hover > p {display:none;}
+
+    .czech {grid-row: 2;
+                grid-column: 3;
+            position: relative;
+        overflow: hidden;
+            background: url("Czech.jpg") ;
+        background-size: cover;}
+        .czech:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;}
+    .czech:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .czech:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+    .czech:hover > p {display:none;}
+    
+    .turkey {grid-row: 3;
+                grid-column: 2;
+            position: relative;
+        overflow: hidden;
+            background: url("Turkey.jpg") ;
+        background-size: cover;}
+        .turkey:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;}
+    .turkey:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .turkey:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+    .turkey:hover > p {display:none;}
+    
+    .italy {grid-row:3;
+            grid-column: 3;
+        position: relative;
+        overflow: hidden;
+            background: url("Italy.jpg") ;
+        background-size: cover;}
+        .italy:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+	opacity: 0.8;}
+    .italy:hover::after {
+            content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: none;
+	opacity: 1; }
+    .italy:hover {transform: scale(1.05); transition: transform 0.5s ease;}
+        .italy:hover > p {display:none;}
+
+
+    @media all and (max-width:1100px)
+     {#travel {
+      display: grid;
+      max-width: 1100px;
+      height: 900px;
+      grid-template-columns: repeat(2, minmax(300px, 1fr)) ;
+      grid-template-rows: repeat(4, minmax(300px, 1fr)) ;
+      gap: 15px;
+      margin:20px auto;}
+      .spain {grid-row: 2/ span 2;}
+      .bali {grid-column: 1/ span 2;}
+      .turkey {grid-row: 4;
+                grid-column: 2;}
+      .egypt {grid-row: 2;
+                grid-column: 2;}
+       .italy {grid-row:4;
+            grid-column: 1;}
+        .czech {grid-row: 3;
+                grid-column: 2;}
+        }
+        @media all and (max-width:800px)
+     {#travel {
+      
+        display: grid;
+        max-width: 800px;
+        grid-template-columns:minmax(100px, 400px);
+        grid-template-rows: repeat(6, minmax(300px, 1fr));
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+        justify-content: center;
+            }
+
+            .spain { grid-area: 1 / 1 / 2 / 2; }
+            .bali { grid-area: 2 / 1 / 3 / 2; }
+            .turkey { grid-area: 3 / 1 / 4 / 2; }
+            .egypt { grid-area: 4 / 1 / 5 / 2; }
+            .czech { grid-area: 5 / 1 / 6 / 2; }
+            .italy {grid-area: 6 / 1 / 7 / 2; }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="travel">
+        <div class="spain"> <p>Испания</p> </div>
+        <div class="bali"><p> Бали</p></div>
+        <div class="turkey"><p> Турция</p></div>
+        <div class="egypt"> <p>Египет</p></div>
+        <div class="italy"><p> Италия</p></div>
+        <div class="czech"><p> Чехия</p></div>
+    </div>
+</body>
+</html>
