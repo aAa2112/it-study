@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <script>
+     function Castle() {
+    
+    let archers = Number(prompt("Введите количество лучников:")) 
+    let mages = Number(prompt("Введите количество магов:")) 
+    let enemies = Number(prompt("Введите количество врагов:")) 
+    
+    
+    let hasDragon = confirm("Есть ли дракон? ");
+    
+    
+
+
+    
+    let maxTurns = 10;
+    let Message = "Замок захвачен! (прошло 10 ходов)"; 
+    let remainingEnemies = enemies;
+
+    for (let turn = 1; turn <= maxTurns; turn++) {
+        let Damage = 0;
+
+        
+        Damage += archers * 1;
+
+        
+        if (hasDragon) {
+            Damage += 5;
+        }
+
+        
+        if (turn % 2 !== 0) {
+            Damage += mages * 2;
+        }
+
+        
+        remainingEnemies -= Damage;
+
+        
+        if (remainingEnemies <= 0) {
+            Message = `Победа, Враги повержены за ${turn} ход(а/ов).`;
+            break; 
+        }
+    }
+
+    
+    alert(Message);
+}
+
+
+Castle();
+</script>
+</body>
+</html>
