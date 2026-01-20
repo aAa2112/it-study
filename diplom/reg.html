@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBY - Регистрация</title>
+    <link rel="stylesheet" href="reg.css" >
+    <link rel="shortcut icon" href="diplom images/plane-svgrepo-com.svg" type="image/png">
+    <style>
+       
+    </style>
+</head>
+<body>
+   <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">Travel<span>BY</span></a>
+            <nav>
+                <ul>
+                    <li><a href="mainpage.html"  class="btn-book">Вернутся на начальную страницу </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-container">
+                <h2 class="form-title">Регистрация</h2>
+                
+                <form class="registration-form" method="post" action="https://fe.it-academy.by/TestForm.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lastName" class="required">Фамилия</label>
+                            <input type="text" id="lastName" name="lastName" maxlength="15" pattern="[A-Za-zА-Яа-яёЁ]+" required placeholder="Иванов">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="firstName" class="required">Имя</label>
+                            <input type="text" id="firstName" name="firstName" maxlength="15" pattern="[A-Za-zА-Яа-яёЁ]+" required placeholder="Иван">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="middleName">Отчество</label>
+                        <input type="text" id="middleName" name="middleName" maxlength="15" pattern="[A-Za-zА-Яа-яёЁ]+" placeholder="Иванович">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city" class="required">Город проживания</label>
+                        <input type="text" id="city" name="city" maxlength="15" pattern="[A-Za-zА-Яа-яёЁ]+" required placeholder="Минск">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Электронная почта</label>
+                        <input type="email" id="email" name="email"  required placeholder="example@mail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Телефон</label>
+                        <input type="tel" id="phone" name="phone" maxlength="15" required placeholder="+375 (29) 122-22-33" pattern="[\+]\d{1}\s?[(]\d{3}[)]\s?\d{3}[-]\d{2}[-]\d{2}">
+                    </div>
+                    
+                    <div class="terms-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms" class="required">
+                            Я согласен с <a href="#">Условиями использования</a> и <a href="#">Политикой конфиденциальности</a> TravelBY
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                </form>
+                
+                <div class="login-link">
+                    Уже есть аккаунт? <a href="login.html">Войти</a>
+                </div>
+                
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TravelBY</h3>
+                    <p>Создаём незабываемые впечатления от путешествий с 2020 года. Ваше путешествие начинается с нами.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="diplom images/facebook.svg" width="30px"></a>
+                        <a href="#"><img src="diplom images/x-dot-org.svg" width="30px"></a> 
+                        <a href="#"> <img src="diplom images/youtube.svg" width="30px"></a>
+                        <a href="#"><img src="diplom images/instagram.svg" width="30px"></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Быстые ссылки</h3>
+                    <a href="#home"> Главная</a>
+                    <a href="#packages">Пакеты</a>
+                    <a href="#about">О нас</a>
+                    <a href="#contact">Контакт</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Контактная информация</h3>
+                    <p> Гродно, ул.Брикеля 19а</p>
+                    <p> +375 (29) 555-33-99</p>
+                    <p> travelBY@gmail.com</p>
+                    <p> Пн - Пт: 9:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 TravelBY. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
